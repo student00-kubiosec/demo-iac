@@ -1,0 +1,8 @@
+name: Check site on push
+on: [push]
+jobs:
+  check-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check site responds
+        run: curl -fsS --max-time 30 https://www.radarhack.com
